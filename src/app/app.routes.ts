@@ -5,6 +5,7 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { ProductoDetalleComponent } from './pages/producto-detalle/producto-detalle.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { LoginComponent } from './pages/login/login.component';
+import { PagoComponent } from './pages/pago/pago.component';
 
 export const routes: Routes = [
     {path:'home',
@@ -25,9 +26,9 @@ export const routes: Routes = [
   {path:'registro',
     component:RegistroComponent
   },
- /* {path:'pago',
+  {path:'pago',
     component:PagoComponent
-  },*/
+  },
   {path:'**',
     component:HomeComponent
   }
