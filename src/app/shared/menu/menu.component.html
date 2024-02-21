@@ -1,19 +1,14 @@
-<mat-toolbar color="primary">
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>TIENDA ONLINE</span>
-  <span class="example-spacer"></span>
-  <a mat-button>Home</a>
-  <a mat-button>Productos</a>
-  <button
-  mat-icon-button
-  class="example-icon"
-  aria-label="Example icon-button with menu icon">
-  <mat-icon>add_sopping_cart</mat-icon>
-</button>
-</mat-toolbar>
+<mat-toolbar  color="primary">
+    <button  mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>TIENDA ONLINE</span>
+    <span class="example-spacer"></span>
+    <a [routerLink]="['/home']" mat-button>Home</a>
+    <a [routerLink]="['/productos']" mat-button>Productos</a>
+    <a [routerLink]="['/pago']" mat-button>pago</a>
+    <button [routerLink]="['/carrito']" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
+  
