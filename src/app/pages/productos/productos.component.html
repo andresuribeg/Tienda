@@ -1,3 +1,24 @@
-<pre>
-    {{ products$ | async | json }}
-</pre>
+<div class="container-tarjetas">
+    <mat-card *ngFor="let producto of productosPaginados; let i = index" class="producto-card">
+      <img
+        [src]="producto.image"
+        alt="{{ producto.title }}"
+        class="producto-image"
+      />
+      <div class="producto-info">
+        <h3>{{ producto.title }}</h3>
+        <p>{{ producto.description }}</p>
+        <p class="producto-price">Precio: ${{ producto.price }}</p>
+        <p class="producto-rating">
+          Calificación: {{ producto.rating.rate }} ({{ producto.rating.count }} reseñas)
+        </p>
+      </div>
+    </mat-card>
+  </div>
+  
+  <mat-paginator
+    [length]="totalProductos"
+    [pageSize]="productosPorPagina"
+    (page)="cambiarPagina($event)"
+  ></mat-paginator>
+  

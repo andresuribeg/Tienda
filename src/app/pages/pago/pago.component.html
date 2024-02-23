@@ -1,0 +1,55 @@
+<mat-card class="center-content ">
+    <form [formGroup]="pagosForm" (ngSubmit)="onSubmit()" >
+  
+  <div class="card" >
+    <h1>Datos de envio</h1>
+    <p>
+      <mat-form-field class="form-group" appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre">
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="form-group" appearance="outline">
+        <mat-label>Cedula</mat-label>
+        <input matInput  formControlName="cedula">
+        <mat-icon matSuffix>fingerprint</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="form-group" appearance="outline">
+        <mat-label>Direccion</mat-label>
+        <input matInput formControlName="direccion">
+        <mat-icon matSuffix>local_shipping</mat-icon>
+        <mat-hint>Agregue Todo el detalle posible</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="form-group" appearance="outline">
+        <mat-label>Celular</mat-label>
+        <input matInput formControlName="telefono">
+        <mat-icon matSuffix>phonelink_ring</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="form-group" appearance="outline">
+        <mat-label>Correo</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="correo">
+        <mat-icon matSuffix>alternate_email</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <label>Metodo de pago: </label>
+        <mat-radio-group pagos   formControlName="tipoDePago" >
+          <mat-radio-button value="Transferencia">Transferencia</mat-radio-button>
+          <mat-radio-button value="Efectivo">Efectivo</mat-radio-button>
+          <mat-radio-button value="Tarjeta">Debito / Credito</mat-radio-button>
+      </mat-radio-group>
+    </p>
+  
+    </div>
+    <button mat-raised-button [disabled]="pagosForm.invalid"  color="primary" class="boton"  type="submit" >Enviar</button>
+    </form>
+  </mat-card>
+  
