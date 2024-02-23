@@ -1,3 +1,13 @@
-<pre>
-    {{ products$ | async | json }}
-</pre>
+<div class="mat-elevation-z2">
+    <div class="Producto-card" *ngFor="let producto of(products | async) as productos">
+    <img [src]="producto.image" alt="{{producto.title}}" class="producto-image">
+    <div class="producto-info">
+        <h3>{{producto.title}}</h3>
+        <p>{{producto.description}}</p>
+        <p class="producto-price">Price: ${{producto.price}}</p>
+        <p class="producto.rating">Rating: {{producto.rating.rate}}({{producto.rating.count}}review)</p>
+
+    </div>
+    </div>
+</div>
+  
