@@ -1,4 +1,4 @@
-<div class="mat-elevation-z2">
+<div class="container-tarjetas">
     <mat-card *ngFor="let producto of productosPaginados; let i = index" class="producto-card">
       <img
         [src]="producto.image"
@@ -14,10 +14,11 @@
         </p>
       </div>
     </mat-card>
-  
-    <mat-paginator
-      [length]="totalProductos"
-      [pageSize]="productosPorPagina"
-      (page)="cambiarPagina($event)"
-    ></mat-paginator>
   </div>
+  
+  <mat-paginator
+    [length]="totalProductos"
+    [pageSize]="productosPorPagina"
+    (page)="cambiarPagina($event)"
+  ></mat-paginator>
+  

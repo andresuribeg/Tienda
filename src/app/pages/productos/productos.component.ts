@@ -17,7 +17,7 @@ export class ProductosComponent implements OnInit {
   productos$: Observable<any>;
   productosPaginados: any[] = [];
   totalProductos: number = 0;
-  productosPorPagina: number = 12;
+  productosPorPagina: number = 10;
   paginaActual: number = 1;
 
   constructor(private productsSvs: ProductServices) {
